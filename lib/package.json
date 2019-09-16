@@ -2,12 +2,19 @@
 	"name": "@preply/lib",
 	"version": "1.0.1",
 	"main": "dist/index.js",
+	"files": [
+		"dist/*"
+	],
 	"license": "MIT",
 	"scripts": {
 		"prepublishOnly": "webpack"
 	},
 	"dependencies": {
+		"@types/lodash": "^4.14.138",
+		"fork-ts-checker-webpack-plugin": "^1.5.0",
 		"lodash": "^4.17.15",
+		"ts-loader": "^6.1.0",
+		"typescript": "^3.6.3",
 		"webpack": "^4.40.2",
 		"webpack-cli": "^3.3.8",
 		"webpack-dev-server": "^3.8.1"
