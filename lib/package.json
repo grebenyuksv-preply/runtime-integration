@@ -1,0 +1,15 @@
+{
+	"name": "@preply/lib",
+	"version": "1.0.1",
+	"main": "dist/index.js",
+	"license": "MIT",
+	"scripts": {
+		"prepublishOnly": "webpack"
+	},
+	"dependencies": {
+		"lodash": "^4.17.15",
+		"webpack": "^4.40.2",
+		"webpack-cli": "^3.3.8",
+		"webpack-dev-server": "^3.8.1"
+	}
+}
