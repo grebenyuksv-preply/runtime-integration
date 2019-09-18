@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 			res.send({
 				// manifest,
 				version,
-				url: 'http://localhost:8081/dist/index.js',
+				url: 'http://localhost:8081/dist/shim.js',
 			});
 		});
 });

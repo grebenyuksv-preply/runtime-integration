@@ -1,7 +1,8 @@
 {
 	"name": "@preply/lib",
 	"version": "1.0.1",
-	"main": "dist/index.js",
+	"main": "dist/shim.js",
+	"types": "dist/shim.d.ts",
 	"files": [
 		"dist/*"
 	],
@@ -11,8 +12,10 @@
 	},
 	"dependencies": {
 		"@types/lodash": "^4.14.138",
+		"@types/react": "^16.9.2",
 		"fork-ts-checker-webpack-plugin": "^1.5.0",
 		"lodash": "^4.17.15",
+		"react": "^16.9.0",
 		"ts-loader": "^6.1.0",
 		"typescript": "^3.6.3",
 		"webpack": "^4.40.2",
