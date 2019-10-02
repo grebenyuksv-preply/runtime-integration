@@ -1,30 +1,46 @@
 // export const shim = async () => {
-// 	let { run } = await import(/* webpackChunkName: "lib" */ '.');
-// 	return run();
+//  let { run } = await import(/* webpackChunkName: "lib" */ '.');
+//  return run();
 // };
+
+interface Manifest {
+    URL: string;
+}
 
 export const hello = () => console.log('hello');
 
-import React, { FC } from 'react';
+import { FC } from 'react';
 
-export const Widget: FC = () => <div>Widget!!!</div>;
+export const loadWidget = async () => {
+    await load();
+    console.log('here1', window['__PREPLY_LIB__']);
+    let lib = await import(/* webpackChunkName: "index" */ '.');
+    console.log('here2', lib);
+    return lib.Widget;
+};
 
-export const loadWidget: () => Promise<FC> = () => Promise.resolve(Widget);
+const load = async () => {
+    return new Promise(async resolve => {
+        const res = await fetch('http://localhost:3000/');
+        console.log(res.status);
+        const manifest = (await res.json()) as Manifest;
+        console.log(manifest, manifest.URL);
+        const s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = manifest.URL;
+        s.onload = resolve;
+        document.querySelector('head').appendChild(s);
+    });
+};
 
-// fetch('http://localhost:3000/')
-// 	.then(res => {
-// 		console.log(res.status);
-// 		return res.json();
-// 	})
-// 	.then(manifest => {
-// 		console.log(manifest);
-// 		fetch(manifest.url)
-// 			.then(res => res.text())
-// 			.then(eval)
-// 			.then(console.log);
-// 		// .then(() => (window as any).__PREPLY_LIB__.run().then(console.log));
-// 	});
+export const loadLib = async () => {
+    await load();
+    console.log('here1', window['__PREPLY_LIB__']);
+    let lib = await import(/* webpackChunkName: "index" */ '.');
+    console.log('here2', lib);
+    return lib;
+};
 
 // (window as any).__PREPLY_LIB__ = {
-// 	shim,
+//  shim,
 // };

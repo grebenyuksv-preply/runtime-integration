@@ -6,3 +6,7 @@ export const run = async () => {
 	console.log('Lib -> Dynamic Latest', map([5, 4, 3, 2, 1], x => x * x));
 	return 100500;
 };
+
+import React, { FC } from 'react';
+
+export const Widget: FC = () => <div>Widget!</div>;
