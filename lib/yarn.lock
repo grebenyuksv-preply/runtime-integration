@@ -683,7 +683,7 @@ camelcase@^5.0.0:
   resolved "https://0.0.0.0:443/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
-chalk@2.4.2, chalk@^2.3.0, chalk@^2.4.1:
+chalk@2.4.2, chalk@^2.0, chalk@^2.3.0, chalk@^2.4.1:
   version "2.4.2"
   resolved "https://0.0.0.0:443/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
   integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
@@ -2248,6 +2248,16 @@ locate-path@^3.0.0:
     p-locate "^3.0.0"
     path-exists "^3.0.0"
 
+lodash.get@^4.0:
+  version "4.4.2"
+  resolved "https://registry.npmjs.org/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
+
+lodash.has@^4.0:
+  version "4.5.2"
+  resolved "https://registry.npmjs.org/lodash.has/-/lodash.has-4.5.2.tgz#d19f4dc1095058cccbe2b0cdf4ee0fe4aa37c862"
+  integrity sha1-0Z9NwQlQWMzL4rDN9O4P5Ko3yGI=
+
 lodash@^4.17.11, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://0.0.0.0:443/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
@@ -2491,7 +2501,7 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
-mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1:
+mkdirp@0.5.x, mkdirp@^0.5, mkdirp@^0.5.0, mkdirp@^0.5.1:
   version "0.5.1"
   resolved "https://0.0.0.0:443/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
@@ -3978,6 +3988,19 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
+webpack-assets-manifest@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.npmjs.org/webpack-assets-manifest/-/webpack-assets-manifest-3.1.1.tgz#39bbc3bf2ee57fcd8ba07cda51c9ba4a3c6ae1de"
+  integrity sha512-JV9V2QKc5wEWQptdIjvXDUL1ucbPLH2f27toAY3SNdGZp+xSaStAgpoMcvMZmqtFrBc9a5pTS1058vxyMPOzRQ==
+  dependencies:
+    chalk "^2.0"
+    lodash.get "^4.0"
+    lodash.has "^4.0"
+    mkdirp "^0.5"
+    schema-utils "^1.0.0"
+    tapable "^1.0.0"
+    webpack-sources "^1.0.0"
+
 webpack-cli@^3.3.8:
   version "3.3.9"
   resolved "https://0.0.0.0:443/webpack-cli/-/webpack-cli-3.3.9.tgz#79c27e71f94b7fe324d594ab64a8e396b9daa91a"
@@ -4053,7 +4076,7 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
-webpack-sources@^1.4.0, webpack-sources@^1.4.1:
+webpack-sources@^1.0.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1:
   version "1.4.3"
   resolved "https://0.0.0.0:443/webpack-sources/-/webpack-sources-1.4.3.tgz#eedd8ec0b928fbf1cbfe994e22d2d890f330a933"
   integrity sha512-lgTS3Xhv1lCOKo7SA5TjKXMjpSM4sBjNV5+q2bqesbSPs5FjGmU6jjtBSkX9b4qW87vDIsCIlUPOEhbZrMdjeQ==

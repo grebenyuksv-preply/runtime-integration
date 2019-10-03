@@ -5,7 +5,7 @@
 		"module": "commonjs",
 		"target": "es5",
 		"outDir": "./dist",
-		"rootDir": "./src",
+		"rootDirs": ["./src"],
 		"sourceMap": true
 	},
 	"include": ["src/**/*"]

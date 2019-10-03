@@ -1,8 +1,6 @@
 {
 	"name": "@preply/lib",
 	"version": "1.0.2",
-	"main": "dist/shim/shim.js",
-	"types": "dist/shim.d.ts",
 	"files": [
 		"dist/*"
 	],
@@ -20,6 +18,7 @@
 		"ts-loader": "^6.1.0",
 		"typescript": "^3.6.3",
 		"webpack": "^4.40.2",
+		"webpack-assets-manifest": "^3.1.1",
 		"webpack-cli": "^3.3.8",
 		"webpack-dev-server": "^3.8.1"
 	}

@@ -1,12 +1,14 @@
-console.log('Lib -> Static');
+// console.log('Lib -> Static');
 
-export const run = async () => {
-	let { map } = await import(/* webpackChunkName: "lodash" */ 'lodash');
-	// const { map } = require('lodash');
-	console.log('Lib -> Dynamic Latest', map([5, 4, 3, 2, 1], x => x * x));
-	return 100500;
-};
+// // export const run = async () => {
+// // 	let { map } = await import(/* webpackChunkName: "lodash" */ 'lodash');
+// // 	// const { map } = require('lodash');
+// // 	console.log('Lib -> Dynamic Latest', map([5, 4, 3, 2, 1], x => x * x));
+// // 	return 100500;
+// // };
 
 import React, { FC } from 'react';
 
-export const Widget: FC = () => <div>Widget!</div>;
+export const Widget: FC = () => <div>Widget!!!</div>;
+
+export default 'lib';
